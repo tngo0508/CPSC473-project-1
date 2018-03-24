@@ -8,12 +8,9 @@
 
 body {
   background-image: url("../img/quiz.png");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  /* display: flex;
-  flex-direction: column;
-  font-size: 20px; */
+  background-attachment: fixed;
 }
 
 html, body {
