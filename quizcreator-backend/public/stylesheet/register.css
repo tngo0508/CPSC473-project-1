@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'TheBlacklist';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/TheBlacklist.eot');
+  src: local('TheBlacklist'), url('fonts/TheBlacklist.woff') format('woff'), url('fonts/TheBlacklist.ttf') format('truetype');
+}
+
+form {
+  margin: 0px 10px;
+}
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.container {
+  max-width: 360px;
+}
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.divider hr {
+  margin: 7px 0px;
+  width: 35%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+body {
+  background-image: url("../img/quiz.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'TheBlacklist';
+  line-height: 100px;
+  margin: auto;
+  margin-top: -400px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: 'Passion One', cursive;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.modal-dialog {
+  width: 600px;
+  margin: 200px auto;
+  position: relative;
+}
+
+.modal-content {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
