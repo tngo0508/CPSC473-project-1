@@ -7,6 +7,7 @@
   // var RemoteDataStore = App.RemoteDataStore;
   var FormHandler = App.FormHandler;
   // var remoteDS = new RemoteDataStore(SERVER_URL_USER);
+  var Validation = App.Validation;
   var formhandler = new FormHandler(FORM_SELECTOR);
   var dpd = window.dpd;
 
@@ -32,4 +33,6 @@
       console.log("Cannot create account");
     }
   });
+
+  formhandler.addInputHandler(Validation.validatePassword);
 })(window);

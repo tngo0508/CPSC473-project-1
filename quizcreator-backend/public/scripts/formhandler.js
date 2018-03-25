@@ -30,6 +30,25 @@
     });
   };
 
+  FormHandler.prototype.addInputHandler = function(fn) {
+    console.log("Setting input handler for form");
+    var password;
+    var passwordAgain;
+    this.$formElement.on("input", "[name=password]", function(event) {
+      password = event.target.value;
+    });
+    this.$formElement.on("input", "[name=passwordAgain]", function(event) {
+      passwordAgain = event.target.value;
+      var message = "";
+      if (fn(password, passwordAgain)) {
+        event.target.setCustomValidity("");
+      } else {
+        message = "Passwords must match";
+        event.target.setCustomValidity(message);
+      }
+    });
+  };
+
   App.FormHandler = FormHandler;
   window.App = App;
 })(window);
