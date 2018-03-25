@@ -1,12 +1,12 @@
 {
 	"type": "Collection",
 	"properties": {
-		"username": {
-			"name": "username",
+		"name": {
+			"name": "name",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
-			"id": "username",
+			"id": "name",
 			"order": 0
 		},
 		"emailAddress": {
