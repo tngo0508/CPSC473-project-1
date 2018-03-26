@@ -1,5 +1,5 @@
 {
-	"type": "Collection",
+	"type": "UserCollection",
 	"properties": {
 		"name": {
 			"name": "name",
@@ -8,22 +8,6 @@
 			"required": false,
 			"id": "name",
 			"order": 0
-		},
-		"emailAddress": {
-			"name": "emailAddress",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "emailAddress",
-			"order": 1
-		},
-		"password": {
-			"name": "password",
-			"type": "string",
-			"typeLabel": "string",
-			"required": false,
-			"id": "password",
-			"order": 2
 		}
 	}
 }

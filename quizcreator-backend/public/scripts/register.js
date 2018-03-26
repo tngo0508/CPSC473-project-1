@@ -8,25 +8,21 @@
   var FormHandler = App.FormHandler;
   // var remoteDS = new RemoteDataStore(SERVER_URL_USER);
   var Validation = App.Validation;
-  var formhandler = new FormHandler(FORM_SELECTOR);
+  var formHandler = new FormHandler(FORM_SELECTOR);
   var dpd = window.dpd;
 
-  formhandler.addCreateAccountHandler(function(data) {
+  formHandler.addSubmitHandler(function(data) {
     if (data["password"] === data["passwordAgain"]) {
       console.log("New account has just created");
       dpd.users.post({
-        "name": data["name"],
-        "emailAddress": data["email"],
-        "password": data["password"]
+        name: data["name"],
+        username: data["email"],
+        password: data["password"]
       }, function(result, error) {
         if (error) {
-          if (error.message) {
-            alert(error.message);
-          } else if (error.errors && error.errors.message) {
-            alert("Message " + error.errors.message);
-          } else {
-            alert("An error occurred");
-          }
+          alert(JSON.stringify(error));
+        } else {
+          // location.href = "/login.html";
         }
       });
     } else {
@@ -34,5 +30,5 @@
     }
   });
 
-  formhandler.addInputHandler(Validation.validatePassword);
+  formHandler.addInputHandler(Validation.validatePassword);
 })(window);

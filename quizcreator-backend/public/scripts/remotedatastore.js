@@ -1,7 +1,7 @@
 (function(window) {
   "user strict";
   var App = window.App || {};
-  var $ = window.jQuery;
+  // var $ = window.jQuery;
 
   function RemoteDataStore(url) {
     if (!url) {
