@@ -3,20 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Main Page</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="stylesheet/quiz.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans|Oxygen|Passion+One"> -->
   </head>
-  <body>
-    <h1>Quiz</h1>
-
-    <div class="quiz-container">
-      <div id="quiz"></div>
+<body>
+  <header>
+    <h1 class="welcome-text">Quiz</h1>
+  </header>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="quiz-container">
+        <div id="quiz"></div>
+      </div>
+      <button id="previous">Previous Question</button>
+      <button id="next">Next Question</button>
+      <button id="submit">Submit Quiz</button>
+      <div id="results"></div>
     </div>
+  </div>
 
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
 
 <!-- Followed tutorial; https://www.sitepoint.com/simple-javascript-quiz/ -->
     <script src="scripts/quiz.js" charset="utf-8"></script>
+</body>
 </html>
