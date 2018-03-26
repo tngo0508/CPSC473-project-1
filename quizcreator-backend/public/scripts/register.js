@@ -22,7 +22,7 @@
         if (error) {
           alert(JSON.stringify(error));
         } else {
-          // location.href = "/login.html";
+          location.href = "/login.html";
         }
       });
     } else {
