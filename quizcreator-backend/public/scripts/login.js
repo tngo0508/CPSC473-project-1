@@ -8,7 +8,7 @@
 
   formHandler.addSubmitHandler(function(data) {
     dpd.users.login({
-      emailAddress: data["email"],
+      username: data["email"],
       password: data["password"]
     }, function(result, error) {
       if (error) {
