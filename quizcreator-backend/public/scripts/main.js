@@ -7,17 +7,24 @@
   var dpd = window.dpd;
 
   formHandler.addSubmitHandler(function(data) {
-    dpd.quiz.post({
-      question: data["question"],
-      optionA: data["optionA"],
-      optionB: data["optionB"],
-      optionC: data["optionC"],
-      answer: data["answer"]
-    }, function(result, error) {
+    dpd.users.me(function(results, error) {
       if (error) {
-        alert(JSON.stringify(error));
+        alert(error.message);
       } else {
-        // location.href = "/main.html";
+        dpd.quiz.post({
+          username: results.username,
+          question: data["question"],
+          optionA: data["optionA"],
+          optionB: data["optionB"],
+          optionC: data["optionC"],
+          answer: data["answer"]
+        }, function(result, error) {
+          if (error) {
+            alert(JSON.stringify(error));
+          } else {
+            // location.href = "/main.html";
+          }
+        });
       }
     });
   });

@@ -40,6 +40,14 @@
 			"required": false,
 			"id": "answer",
 			"order": 4
+		},
+		"username": {
+			"name": "username",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "username",
+			"order": 5
 		}
 	}
 }
