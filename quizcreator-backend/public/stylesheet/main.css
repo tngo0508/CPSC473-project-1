@@ -9,3 +9,7 @@
 h1 {
   font-family: 'TheBlacklist';
 }
+
+#logout-btn {
+  float: right;
+}

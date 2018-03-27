@@ -2,12 +2,15 @@
   "use strict";
   var FORM_SELECTOR = "[data-user-quiz]";
   var FORM_HEADER = "[data-header=welcome]";
+  var BUTTON_LOGOUT = "[data-button=logout]";
   var App = window.App;
   var FormHandler = App.FormHandler;
   var formHandler = new FormHandler(FORM_SELECTOR);
   var dpd = window.dpd;
   var GetName = App.GetName;
   var getName = new GetName(FORM_HEADER);
+  var ButtonHandler = App.ButtonHandler;
+  var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
 
   dpd.users.me(function(results, error) {
     if (error) {
@@ -39,5 +42,7 @@
       }
     });
   });
+
+  buttonHandler.addLogoutHandler();
 
 })(window);

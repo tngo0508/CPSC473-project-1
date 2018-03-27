@@ -1,5 +1,10 @@
 (function(window) {
   "user strict";
+  var BUTTON_LOGOUT = "[data-button=logout]";
+  var App = window.App;
+  var ButtonHandler = App.ButtonHandler;
+  var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
+  buttonHandler.addLogoutHandler();
   var dpd = window.dpd;
   dpd.users.me(function(results, error) {
     if (error) {
