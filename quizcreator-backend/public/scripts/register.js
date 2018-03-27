@@ -1,15 +1,13 @@
 (function(window) {
   "use strict";
   var FORM_SELECTOR = "[data-user-info=form]";
-  // var SERVER_URL_USER = "http://localhost:2403/users";
 
   var App = window.App;
-  // var RemoteDataStore = App.RemoteDataStore;
   var FormHandler = App.FormHandler;
-  // var remoteDS = new RemoteDataStore(SERVER_URL_USER);
   var Validation = App.Validation;
   var formHandler = new FormHandler(FORM_SELECTOR);
   var dpd = window.dpd;
+  var $ = window.jQuery;
 
   formHandler.addSubmitHandler(function(data) {
     if (data["password"] === data["passwordAgain"]) {
@@ -22,9 +20,11 @@
         if (error) {
           alert(JSON.stringify(error));
         } else {
-          location.href = "/login.html";
+          // location.href = "/login.html";
         }
       });
+
+      $("#exampleModal").modal();
     } else {
       console.log("Cannot create account");
     }
