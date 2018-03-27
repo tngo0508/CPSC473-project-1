@@ -20,7 +20,7 @@
   };
 
   function Row(user) {
-    var $h1 = $("<h1>Welcom to quizCreator, " + user.name + "!</h1>", {
+    var $h1 = $("<h1>Welcome to quizCreator, " + user.name + "!</h1>", {
       "class": "display-4"
     });
 
