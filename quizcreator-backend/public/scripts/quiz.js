@@ -1,6 +1,23 @@
-(function() {
-  const myQuestions = [
-    {
+(function(window) {
+  "user strict";
+  var dpd = window.dpd;
+  var data = {};
+  dpd.quiz.get(function(rows, err) {
+    if (err) {
+      return alert(err.message || "an error occurred.");
+    }
+    rows.forEach(function(row) {
+      data["question"] = row.question;
+      data["optionA"] = row.optionA;
+      data["optionB"] = row.optionB;
+      data["optionc"] = row.optionC;
+      data["answer"] = row.answer;
+    });
+    console.log(data);
+    console.log(data["question"]);
+  });
+  // console.log(data["question"]);
+  const myQuestions = [{
       question: "What animal is the cutest?",
       answers: {
         a: "Kittens",
@@ -141,4 +158,4 @@
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
-})();
+})(window);

@@ -11,12 +11,13 @@
       question: data["question"],
       optionA: data["optionA"],
       optionB: data["optionB"],
-      optionC: data["optionC"]
+      optionC: data["optionC"],
+      answer: data["answer"]
     }, function(result, error) {
       if (error) {
         alert(JSON.stringify(error));
       } else {
-        location.href = "/main.html";
+        // location.href = "/main.html";
       }
     });
   });
