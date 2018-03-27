@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'TheBlacklist';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/TheBlacklist.eot');
+  src: local('TheBlacklist'), url('fonts/TheBlacklist.woff') format('woff'), url('fonts/TheBlacklist.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'TheBlacklist';
+}
