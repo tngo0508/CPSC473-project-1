@@ -1,0 +1,45 @@
+{
+	"type": "Collection",
+	"properties": {
+		"question": {
+			"name": "question",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "question",
+			"order": 0
+		},
+		"optionA": {
+			"name": "optionA",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "optionA",
+			"order": 1
+		},
+		"optionB": {
+			"name": "optionB",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "optionB",
+			"order": 2
+		},
+		"optionC": {
+			"name": "optionC",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "optionC",
+			"order": 3
+		},
+		"answer": {
+			"name": "answer",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "answer",
+			"order": 4
+		}
+	}
+}

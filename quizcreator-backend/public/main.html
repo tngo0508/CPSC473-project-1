@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Main Page</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="stylesheet/quiz.css">
-    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans|Oxygen|Passion+One"> -->
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Main Page</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+
 <body>
   <header>
-    <h1 class="welcome-text">Quiz</h1>
+    <h1 class="text-center">Create your quiz</h1>
   </header>
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="quiz-container">
-        <div id="quiz"></div>
+  <section>
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <form data-user-quiz="form" class="col-10">
+          <div class="form-group">
+            <label for="question">Question </label>
+            <textarea name="question" class="form-control" rows="3" cols="80"></textarea><br>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="optionA">Option A</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="optionA" name="optionA">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="optionB">Option B</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="optionB" name="optionB">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="optionC">Option C</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="optionC" name="optionC">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="answer">Answer</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="answer" name="answer">
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-default">Next Question</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+          </div>
+        </form>
       </div>
-      <button id="previous">Previous Question</button>
-      <button id="next">Next Question</button>
-      <button id="submit">Submit Quiz</button>
-      <div id="results"></div>
     </div>
-  </div>
+  </section>
 
-
-<!-- Followed tutorial; https://www.sitepoint.com/simple-javascript-quiz/ -->
-    <script src="scripts/quiz.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/dpd.js" type="text/javascript"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
 </body>
+
 </html>
