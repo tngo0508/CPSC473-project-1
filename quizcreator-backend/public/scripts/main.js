@@ -1,10 +1,21 @@
 (function(window) {
   "use strict";
   var FORM_SELECTOR = "[data-user-quiz]";
+  var FORM_HEADER = "[data-header=welcome]";
   var App = window.App;
   var FormHandler = App.FormHandler;
   var formHandler = new FormHandler(FORM_SELECTOR);
   var dpd = window.dpd;
+  var GetName = App.GetName;
+  var getName = new GetName(FORM_HEADER);
+
+  dpd.users.me(function(results, error) {
+    if (error) {
+      alert(error.message);
+    } else {
+      getName.addRow(results);
+    }
+  });
 
   formHandler.addSubmitHandler(function(data) {
     dpd.users.me(function(results, error) {
