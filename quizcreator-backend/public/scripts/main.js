@@ -3,6 +3,7 @@
   var FORM_SELECTOR = "[data-user-quiz]";
   var FORM_HEADER = "[data-header=welcome]";
   var BUTTON_LOGOUT = "[data-button=logout]";
+  var FORM_ALERT = "[data-user-alert=alert]";
   var App = window.App;
   var FormHandler = App.FormHandler;
   var formHandler = new FormHandler(FORM_SELECTOR);
@@ -11,6 +12,8 @@
   var getName = new GetName(FORM_HEADER);
   var ButtonHandler = App.ButtonHandler;
   var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
+  var CreateAlert = App.CreateAlert;
+  var createAlert = new CreateAlert(FORM_ALERT);
 
   dpd.users.me(function(results, error) {
     if (error) {
@@ -42,11 +45,13 @@
             if (error) {
               alert(JSON.stringify(error));
             } else {
-              // location.href = "/main.html";
+              console.log("success alert");
+              createAlert.addRowSuccess();
             }
           });
         } else {
-          console.log("No question is added.");
+          createAlert.addRowFailure();
+          console.log("failure alert");
         }
       }
     });
