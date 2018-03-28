@@ -46,7 +46,7 @@
           <div class="form-group">
             <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
           </div>
-          <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+          <p class="form-group">By creating an account, you agree to our <a href="#" data-toggle="modal" data-target="#terms-of-use">Terms of Use</a> and our <a href="#" data-toggle="modal" data-target="#privacy-policy">Privacy Policy</a>.</p>
           <hr>
           <p></p>Already have an account? <a href="login.html">Sign in</a>
           <p></p>
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Success modal for creating account -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -75,6 +75,53 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal for tems of use-->
+  <div class="modal fade" id="terms-of-use" tabindex="-1" role="dialog" aria-labelledby="terms-of-use" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="terms-of-user-title">Terms of Use</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          By using this <strong>quizCreator</strong>, you agree to be bound by, and to comply with, these Terms and Conditions. If you do not agree to these Terms and Conditions, please do not use this site. <strong>PLEASE NOTE</strong>: We reserve the
+          right, at our sole discretion, to change, modify or otherwise alter these Terms and Conditions at any time. Unless otherwise indicated, amendments will become effective immediately. Please review these Terms and Conditions periodically. Your
+          continued use of the Site following the posting of changes and/or modifications will constitute your acceptance of the revised Terms and Conditions and the reasonableness of these standards for notice of changes. For your information, this page
+          was last updated as of the date at the top of these terms and conditions.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for privacy policy-->
+  <div class="modal fade" id="privacy-policy" tabindex="-1" role="dialog" aria-labelledby="privacy-policy" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="privacy-policy-title">Privacy Policy</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          We operates the <strong>quizCreator</strong> website, which provides the SERVICE. This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our
+          Service. If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share
+          your information with anyone except as described in this Privacy Policy. The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at <strong>quizCreator</strong>, unless otherwise defined
+          in this Privacy Policy.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
