@@ -40,6 +40,12 @@ body {
   right: 16px;
 }
 
+#create-new-quiz {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
 button {
   font-family: 'Work Sans', sans-serif;
   font-size: 22px;

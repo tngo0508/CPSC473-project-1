@@ -26,7 +26,42 @@
         }
       });
     });
+  };
 
+  ButtonHandler.prototype.addCreateNewQuiz = function() {
+    console.log("Setting create new quiz handler for button");
+    this.$formElement.on("click", function() {
+      dpd.users.me(function(user, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          dpd.quiz.get({
+            username: user.username
+          }, function(questions, error) {
+            if (error) {
+              alert(error.message || "an error occurred");
+            } else {
+              if (questions.length !== 0) {
+                questions.forEach(function(question) {
+                  dpd.quiz.del({
+                    username: user.username,
+                    id: question.id
+                  }, function(results, error) {
+                    if (error) {
+                      alert(error.message);
+                    } else {
+                      location.href = "/main.html";
+                    }
+                  });
+                });
+              } else {
+                location.href = "/main.html";
+              }
+            }
+          });
+        }
+      });
+    });
   };
 
   App.ButtonHandler = ButtonHandler;
