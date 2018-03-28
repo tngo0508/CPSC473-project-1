@@ -20,11 +20,10 @@
         if (error) {
           alert(JSON.stringify(error));
         } else {
-          // location.href = "/login.html";
+          $("#exampleModal").modal();
         }
       });
 
-      $("#exampleModal").modal();
     } else {
       console.log("Cannot create account");
     }
