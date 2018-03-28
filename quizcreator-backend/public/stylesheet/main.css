@@ -13,3 +13,7 @@ h1 {
 #logout-btn {
   float: right;
 }
+
+.alert {
+  text-align: center;
+}
