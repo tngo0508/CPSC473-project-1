@@ -32,16 +32,16 @@
         var question = data["question"],
           optionA = data["optionA"],
           optionB = data["optionB"],
-          optionC = data["optionC"],
-          answer = data["answer"];
-        if (question && optionA && optionB && optionC && answer) {
+          optionC = data["optionC"];
+        // answer = data["answer"];
+        if (question && optionA && optionB && optionC) {
           dpd.quiz.post({
             username: results.username,
             question: question,
             optionA: optionA,
             optionB: optionB,
             optionC: optionC,
-            answer: answer
+            // answer: answer
           }, function(result, error) {
             if (error) {
               alert(JSON.stringify(error));
@@ -57,7 +57,7 @@
       }
     });
   });
-  formHandler.addAnswerHandler(Validation.validateAnswer);
+  // formHandler.addAnswerHandler(Validation.validateAnswer);
 
   buttonHandler.addLogoutHandler();
 

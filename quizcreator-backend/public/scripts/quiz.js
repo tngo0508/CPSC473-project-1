@@ -31,8 +31,8 @@
               a: data.optionA,
               b: data.optionB,
               c: data.optionC
-            },
-            correctAnswer: data.answer
+            }
+            // correctAnswer: data.answer
           });
         });
 
@@ -134,21 +134,20 @@
 
 
             // if answer is correct
-            if (userAnswer === currentQuestion.correctAnswer) {
-              // add to the number of correct answers
-              numCorrect++;
-
-              // color the answers green
-              answerContainers[questionNumber].style.color = "lightgreen";
-            } else {
-              // if answer is wrong or blank
-              // color the answers red
-              answerContainers[questionNumber].style.color = "red";
-            }
+            // if (userAnswer === currentQuestion.correctAnswer) {
+            //   // add to the number of correct answers
+            //   numCorrect++;
+            //
+            //   // color the answers green
+            //   answerContainers[questionNumber].style.color = "lightgreen";
+            // } else {
+            //   // if answer is wrong or blank
+            //   // color the answers red
+            //   answerContainers[questionNumber].style.color = "red";
+            // }
           });
-
           // show number of correct answers out of total
-          resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         }
 
         function showSlide(n) {
