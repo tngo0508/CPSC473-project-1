@@ -1,0 +1,37 @@
+{
+	"type": "Collection",
+	"properties": {
+		"username": {
+			"name": "username",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "username",
+			"order": 0
+		},
+		"characterA": {
+			"name": "characterA",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "characterA",
+			"order": 1
+		},
+		"characterB": {
+			"name": "characterB",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "characterB",
+			"order": 2
+		},
+		"characterC": {
+			"name": "characterC",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "characterC",
+			"order": 3
+		}
+	}
+}

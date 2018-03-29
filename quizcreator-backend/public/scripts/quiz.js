@@ -2,6 +2,7 @@
   "user strict";
   var BUTTON_LOGOUT = "[data-button=logout]";
   var BUTTON_CREATE = "[data-button=newQuiz]";
+  var DIV_CHARACTER = "[data-character=character]";
   var App = window.App;
   var ButtonHandler = App.ButtonHandler;
   var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
@@ -9,6 +10,8 @@
   buttonHandler.addLogoutHandler();
   createNewQuiz.addCreateNewQuiz();
   var dpd = window.dpd;
+  var GetCharacter = App.GetCharacter;
+  var getCharacter = new GetCharacter(DIV_CHARACTER);
   dpd.users.me(function(results, error) {
     if (error) {
       alert(error.message);
@@ -36,6 +39,7 @@
         function buildQuiz() {
           //stores html output
           const output = [];
+
 
           myQuestions.forEach((currentQuestion, questionNumber) => {
             //stores answer choices
@@ -66,6 +70,13 @@
           quizContainer.innerHTML = output.join("");
         }
 
+
+        var characterA = 0;
+        var characterB = 0;
+        var characterC = 0;
+        var max = 0;
+        var chosenCharacter;
+
         function showResults() {
           // gather answer containers from our quiz
           const answerContainers = quizContainer.querySelectorAll(".answers");
@@ -79,6 +90,48 @@
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
             const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+            console.log(results[0].username);
+            dpd.character.get({
+              username: results[0].username
+            }, function(characters, error) {
+              console.log(characters);
+              if (error) {
+                return alert(err.message || "an error occurred.");
+              }
+              if (userAnswer === "a") {
+                characterA++;
+              }
+              if (userAnswer === "b") {
+                characterB++;
+              }
+              if (userAnswer === "c") {
+                characterC++;
+              }
+              max = characterA;
+              chosenCharacter = characters[0].characterA;
+              if (characterB > max) {
+                max = characterB;
+                chosenCharacter = characters[0].characterB;
+              }
+              if (characterC > max) {
+                max = characterC;
+                chosenCharacter = characters[0].characterC;
+              }
+              console.log("A: " + characterA);
+              console.log("B: " + characterB);
+              console.log("C: " + characterC);
+              console.log(max);
+              getCharacter.addRow(chosenCharacter);
+            });
+
+
+            // const character = [];
+            // character.push(
+            //   `<div>${chosenCharacter}</div>
+            //     <div>${max}</div>`
+            // );
+
 
             // if answer is correct
             if (userAnswer === currentQuestion.correctAnswer) {
