@@ -34,7 +34,7 @@
           optionB = data["optionB"],
           optionC = data["optionC"],
           answer = data["answer"];
-        if (question || optionA || optionB || optionC || answer) {
+        if (question && optionA && optionB && optionC && answer) {
           dpd.quiz.post({
             username: results.username,
             question: question,
