@@ -1,10 +1,10 @@
 # QuizCreator
 + This application allows users to register or login to their account first. When a user does not have an account, he or she will create one by entering an email address and a password. A user is then asked to login after registering and will be able to create a quiz. When users are done creating a quiz they can create another quiz or allow someone to take the quiz to find out the results after taking the quiz. </br>
 Creating a quiz works as follows:
-1. Enter the question
-2. Enter up to three possible answers
-3. Enter the correct answer
-4. Continue to create a next question and repeat the process.
+* Enter the question
+* Enter up to three possible answers
+* Enter the correct answer
+* Continue to create a next question and repeat the process.
 
 + This application is user-friendly, so anyone can use it. A computer is needed to execute the application locally. This version is local.
 
