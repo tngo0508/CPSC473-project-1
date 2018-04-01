@@ -23,6 +23,7 @@
           return alert(err.message || "an error occurred.");
         }
 
+        var numberOfQuestion = 0;
         const myQuestions = [];
         results.forEach(function(data) {
           myQuestions.push({
@@ -34,7 +35,10 @@
             }
             // correctAnswer: data.answer
           });
+          numberOfQuestion++;
         });
+
+        console.log("Number of question: " + numberOfQuestion);
 
         function buildQuiz() {
           //stores html output
@@ -76,6 +80,7 @@
         var characterC = 0;
         var max = 0;
         var chosenCharacter;
+        var answeredQuestion = 0;
 
         function showResults() {
           // gather answer containers from our quiz
@@ -91,28 +96,35 @@
             const selector = `input[name=question${questionNumber}]:checked`;
             const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
+            if (userAnswer && answeredQuestion < numberOfQuestion) {
+              answeredQuestion++;
+            }
+            console.log("Number of answered questions: " + answeredQuestion);
+
             console.log(results[0].username);
             dpd.character.get({
               username: results[0].username
             }, function(characters, error) {
               console.log(characters);
+              console.log("questionNumber: " + questionNumber);
+              console.log("currentQuestion: " + currentQuestion.question);
               if (error) {
                 return alert(err.message || "an error occurred.");
               }
-              if (userAnswer === "a") {
+              if (userAnswer === "a" && characterA < numberOfQuestion) {
                 characterA++;
               }
-              if (userAnswer === "b") {
+              if (userAnswer === "b" && characterB < numberOfQuestion) {
                 characterB++;
               }
-              if (userAnswer === "c") {
+              if (userAnswer === "c" && characterC < numberOfQuestion) {
                 characterC++;
               }
               max = characterA;
               chosenCharacter = characters[0].characterA;
 
-              if (max === 0) {
-                chosenCharacter = "undefined since you haven't completed the quiz.";
+              if (max === 0 || answeredQuestion < numberOfQuestion) {
+                chosenCharacter = "undefined since you haven't completed the quiz yet. Please refresh the page to retake the quiz.";
               } else {
                 if (characterB > max) {
                   max = characterB;
@@ -122,37 +134,15 @@
                   max = characterC;
                   chosenCharacter = characters[0].characterC;
                 }
-                console.log("A: " + characterA);
-                console.log("B: " + characterB);
-                console.log("C: " + characterC);
               }
-              console.log(max);
+              console.log("A: " + characterA);
+              console.log("B: " + characterB);
+              console.log("C: " + characterC);
+              console.log("Maximum: " + max);
               getCharacter.addRow(chosenCharacter);
             });
 
-
-            // const character = [];
-            // character.push(
-            //   `<div>${chosenCharacter}</div>
-            //     <div>${max}</div>`
-            // );
-
-
-            // if answer is correct
-            // if (userAnswer === currentQuestion.correctAnswer) {
-            //   // add to the number of correct answers
-            //   numCorrect++;
-            //
-            //   // color the answers green
-            //   answerContainers[questionNumber].style.color = "lightgreen";
-            // } else {
-            //   // if answer is wrong or blank
-            //   // color the answers red
-            //   answerContainers[questionNumber].style.color = "red";
-            // }
           });
-          // show number of correct answers out of total
-          // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         }
 
         function showSlide(n) {
