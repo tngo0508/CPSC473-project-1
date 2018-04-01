@@ -35,6 +35,24 @@
         if (error) {
           alert(error.message);
         } else {
+          dpd.character.get({
+            username: user.username
+          }, function(characters, error) {
+            if (error) {
+              alert(error.message || "an error occurred");
+            } else {
+              if (characters.length !== 0) {
+                characters.forEach(function(character) {
+                  dpd.character.del({
+                    username: user.username,
+                    id: character.id
+                  }, function(results, error) {
+                    if (error) alert(error.message);
+                  });
+                });
+              }
+            }
+          });
           dpd.quiz.get({
             username: user.username
           }, function(questions, error) {
