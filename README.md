@@ -72,12 +72,12 @@ Include any essential instructions for:
 -   Fix Minor Bugs
 -   Add More Useful Features
 
-## Contact
+## Authors/Contributors
 
--   grace.derderian@csu.fullerton.edu
--   tngo0508@csu.fullerton.edu
--   aadame4@csu.fullerton.edu
--   cvillanueva19@csu.fullerton.edu
--   mafredi1@csu.fullerton.edu 
+-   **Ngo,Thomas** - _tngo0508@csu.fullerton.edu_ - [tngo0508](https://github.com/tngo0508)
+-   **Derderian,Grace Bernadette** - _grace.derderian@csu.fullerton.edu_ - [gracederderian](https://github.com/gracederderian)
+-   **Adame,Alan** - _aadame4@csu.fullerton.edu_ - [aadame13](https://github.com/aadame13)
+-   **Villanueva,Christopher R** - _cvillanueva19@csu.fullerton.edu_ - [chrisvillan](https://github.com/chrisvillan)
+-   **Afredi,Momtaz Mohmad** - _mafredi1@csu.fullerton.edu_ [mafredi](https://github.com/mafredi) 
 
 ## License
