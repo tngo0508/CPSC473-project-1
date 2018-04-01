@@ -14,7 +14,6 @@
     <div class="jumbotron">
       <button data-button="logout" id="logout-btn" name="logout-btn" type="button" class="btn btn-primary btn-lg pull-right">Logout</button>
       <div data-header="welcome"></div>
-      <!-- <h1 class="display-4">Welcom to quizCreator!</h1> -->
       <p class="lead">Simple website for creating your own quizzes.</p>
       <hr class="my-4">
       <p>This is the place where you can create your own “which character are you?” quizzes</p>
@@ -33,8 +32,18 @@
         </button>
             </div>
             <div class="modal-body">
-              Fill in all the fields and click "Create" to create your quiz. If you want to continute with more questions, go ahead and do the same thing. If you want to reset the information, click on "reset" to clear the field. After you've done, click on "Done"
-              to process to take the quiz.
+              <div>
+                Fill in all the fields and click <strong>Create</strong> button to create a question in your quiz.
+              </div>
+              <div>
+                If you want to create more question, continute to fulfill the information and click on <strong>Create</strong> button again.
+              </div>
+              <div>
+                If you want to reset the information, click on <strong>Reset</strong> button to clear the field.
+              </div>
+              <div>
+                After you've done creating questions for your quiz, click on <strong>Done</strong> button to proceed to next page.
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -69,12 +78,6 @@
               </div>
               <input type="text" class="form-control" aria-label="Default" aria-describedby="optionC" name="optionC">
             </div>
-            <!-- <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="answer">Answer (enter a, b, c) </span>
-              </div>
-              <input type="text" class="form-control" aria-label="Default" aria-describedby="answer" name="answer">
-            </div> -->
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-dark">Create</button>

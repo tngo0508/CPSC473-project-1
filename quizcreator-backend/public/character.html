@@ -33,8 +33,15 @@
         </button>
             </div>
             <div class="modal-body">
-              Fill in all the fields and click "Create" to create your quiz. If you want to continute with more questions, go ahead and do the same thing. If you want to reset the information, click on "reset" to clear the field. After you've done, click on "Done"
-              to process to take the quiz.
+              <div>
+                Fill in all the required fields and click <strong>Create/Update</strong> button to create or update your character options.
+              </div>
+              <div>
+                Click <strong>Done</strong> button to proceed to next page in order to take your new created quiz.
+              </div>
+              <div>
+                Click <strong>Reset</strong> button to reset all information that you've just typed in the required fields.
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -49,8 +56,11 @@
       <div class="row h-100 justify-content-center align-items-center">
         <form data-user-quiz="form" class="col-10">
           <div class="form-group">
-            <label for="prompt">Please enter character options </label>
-            <!-- <textarea name="question" class="form-control" rows="3" cols="80"></textarea><br> -->
+            <div>
+              <p>The <strong>character</strong> of a quiz taker is determined by the <strong>answer option</strong> that is chosen <strong>the most</strong>. For example, if a quiz taker create 3 questions, 2/3 answers are optionA. Then, characterA will
+                be chosen as the character of quiz taker</p>
+            </div>
+            <label for="prompt">Please enter character options: </label>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="characterA">character A</span>
@@ -69,15 +79,9 @@
               </div>
               <input type="text" class="form-control" aria-label="Default" aria-describedby="characterC" name="characterC">
             </div>
-            <!-- <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="answer">Answer (enter a, b, c) </span>
-              </div>
-              <input type="text" class="form-control" aria-label="Default" aria-describedby="answer" name="answer">
-            </div> -->
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-dark">Create</button>
+            <button type="submit" class="btn btn-dark">Create/Update</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
             <a class="btn btn-success" href="quiz.html" role="button">Done</a>
           </div>
