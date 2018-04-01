@@ -28,7 +28,7 @@
   };
 
   function Row(chosenCharacter) {
-    var $div = $("<div></div>", {
+    var $div = $("<strong></strong>", {
       "data-user-character": "chosenCharacter"
     });
 
