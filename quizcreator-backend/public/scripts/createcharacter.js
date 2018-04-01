@@ -32,17 +32,36 @@
           characterB = data["characterB"],
           characterC = data["characterC"];
         if (characterA && characterB && characterC) {
-          dpd.character.post({
-            username: results.username,
-            characterA: characterA,
-            characterB: characterB,
-            characterC: characterC
-          }, function(result, error) {
-            if (error) {
-              alert(JSON.stringify(error));
+          dpd.character.get({
+            username: results.username
+          }, function(character) {
+            if (character) {
+              dpd.character.put(character[0].id, {
+                username: results.username,
+                characterA: characterA,
+                characterB: characterB,
+                characterC: characterC
+              }, function(result, error) {
+                if (error) {
+                  alert(JSON.stringify(error));
+                } else {
+                  createAlert("success alert");
+                }
+              });
             } else {
-              console.log("success alert");
-              createAlert.addRowSuccess();
+              dpd.character.post({
+                username: results.username,
+                characterA: characterA,
+                characterB: characterB,
+                characterC: characterC
+              }, function(result, error) {
+                if (error) {
+                  alert(JSON.stringify(error));
+                } else {
+                  console.log("success alert");
+                  createAlert.addRowSuccess();
+                }
+              });
             }
           });
         } else {
