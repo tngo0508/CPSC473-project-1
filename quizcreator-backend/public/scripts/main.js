@@ -47,11 +47,11 @@
               alert(JSON.stringify(error));
             } else {
               console.log("success alert");
-              createAlert.addRowSuccess();
+              createAlert.addRowSuccess("A question is created for your quiz successfully");
             }
           });
         } else {
-          createAlert.addRowFailure();
+          createAlert.addRowFailure("No question is created! Please fufill all the required fields above");
           console.log("failure alert");
         }
       }

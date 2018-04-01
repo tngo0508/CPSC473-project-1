@@ -14,21 +14,21 @@
     }
   }
 
-  CreateAlert.prototype.addRowSuccess = function() {
+  CreateAlert.prototype.addRowSuccess = function(message) {
     var data = "[data-user-success=success]";
     this.removeRow(data);
     data = "[data-user-failure=failure]";
     this.removeRow(data);
-    var rowElement = new RowSuccess();
+    var rowElement = new RowSuccess(message);
     this.$element.append(rowElement.$element);
   };
 
-  CreateAlert.prototype.addRowFailure = function() {
+  CreateAlert.prototype.addRowFailure = function(message) {
     var data = "[data-user-success=success]";
     this.removeRow(data);
     data = "[data-user-failure=failure]";
     this.removeRow(data);
-    var rowElement = new RowFailure();
+    var rowElement = new RowFailure(message);
     this.$element.append(rowElement.$element);
   };
 
@@ -38,14 +38,26 @@
       .remove();
   };
 
-  function RowSuccess() {
-    var $div = $("<div data-user-success=\"success\" class=\"alert alert-success\" role=\"alert\">A question is created for your quiz successfully</div>");
+  function RowSuccess(message) {
+    var $div = $("<div></div>", {
+      "data-user-success": "success",
+      "class": "alert alert-success",
+      "role": "alert"
+    });
+    var $message = message;
+    $div.append($message);
 
     this.$element = $div;
   }
 
-  function RowFailure() {
-    var $div = $("<div data-user-failure=\"failure\" class=\"alert alert-danger\" role=\"alert\">No question is created! Please fufill all the fields above</div>");
+  function RowFailure(message) {
+    var $div = $("<div></div>", {
+      "data-user-failure": "failure",
+      "class": "alert alert-danger",
+      "role": "alert"
+    });
+    var $message = message;
+    $div.append($message);
 
     this.$element = $div;
   }

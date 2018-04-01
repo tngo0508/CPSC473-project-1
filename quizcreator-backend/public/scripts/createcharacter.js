@@ -45,7 +45,8 @@
                 if (error) {
                   alert(JSON.stringify(error));
                 } else {
-                  createAlert("success alert");
+                  console.log("success update alert");
+                  createAlert.addRowSuccess("All charactere options are updated successfully");
                 }
               });
             } else {
@@ -59,13 +60,13 @@
                   alert(JSON.stringify(error));
                 } else {
                   console.log("success alert");
-                  createAlert.addRowSuccess();
+                  createAlert.addRowSuccess("All character options are created successfully");
                 }
               });
             }
           });
         } else {
-          createAlert.addRowFailure();
+          createAlert.addRowFailure("No character option is created. Please fulfill the required field above");
           console.log("failure alert");
         }
       }
