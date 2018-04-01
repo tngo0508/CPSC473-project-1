@@ -3,6 +3,7 @@
   var BUTTON_LOGOUT = "[data-button=logout]";
   var BUTTON_CREATE = "[data-button=newQuiz]";
   var DIV_CHARACTER = "[data-character=character]";
+  var PROGRESS_BAR = "[data-progress-bar]";
   var App = window.App;
   var ButtonHandler = App.ButtonHandler;
   var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
@@ -12,6 +13,8 @@
   var dpd = window.dpd;
   var GetCharacter = App.GetCharacter;
   var getCharacter = new GetCharacter(DIV_CHARACTER);
+  var ProgressBar = App.ProgressBar;
+  var progressBar = new ProgressBar(PROGRESS_BAR);
   dpd.users.me(function(results, error) {
     if (error) {
       alert(error.message);
@@ -165,12 +168,22 @@
           }
         }
 
+        var current = 1;
+        var width = (current / numberOfQuestion * 100).toFixed(0);
+        progressBar.addRow(width);
+
         function showNextSlide() {
           showSlide(currentSlide + 1);
+          current++;
+          width = (current / numberOfQuestion * 100).toFixed(0);
+          progressBar.addRow(width);
         }
 
         function showPreviousSlide() {
           showSlide(currentSlide - 1);
+          current--;
+          width = (current / numberOfQuestion * 100).toFixed(0);
+          progressBar.addRow(width);
         }
 
         const quizContainer = document.getElementById("quiz");
