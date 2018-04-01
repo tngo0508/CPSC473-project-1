@@ -1,10 +1,10 @@
 # QuizCreator
 + This application allows users to register or login to their account first. When a user does not have an account, he or she will create one by entering an email address and a password. A user is then asked to login after registering and will be able to create a quiz. When users are done creating a quiz they can create another quiz or allow someone to take the quiz to find out the results after taking the quiz. </br>
 Creating a quiz works as follows:
-* Enter the question
-* Enter up to three possible answers
-* Enter the correct answer
-* Continue to create a next question and repeat the process.
+  + Enter the question
+  + Enter up to three possible answers
+  + Enter the correct answer
+  + Continue to create a next question and repeat the process.
 
 + This application is user-friendly, so anyone can use it. A computer is needed to execute the application locally. This version is local.
 
@@ -28,8 +28,6 @@ Include any essential instructions for:
 
 ## Built-With
 - [jQuery API](https://api.jquery.com/) - a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
-- [Deployd](http://docs.deployd.com/docs/getting-started/what-is-deployd.html) - a tool that makes building APIs simple by providing important ready-made functionality out of the box that meet the demands of complex applications.
-- [Bootstrap 4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
 
 
 ## TODO
