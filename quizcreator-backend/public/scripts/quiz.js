@@ -110,17 +110,22 @@
               }
               max = characterA;
               chosenCharacter = characters[0].characterA;
-              if (characterB > max) {
-                max = characterB;
-                chosenCharacter = characters[0].characterB;
+
+              if (max === 0) {
+                chosenCharacter = "undefined since you haven't completed the quiz.";
+              } else {
+                if (characterB > max) {
+                  max = characterB;
+                  chosenCharacter = characters[0].characterB;
+                }
+                if (characterC > max) {
+                  max = characterC;
+                  chosenCharacter = characters[0].characterC;
+                }
+                console.log("A: " + characterA);
+                console.log("B: " + characterB);
+                console.log("C: " + characterC);
               }
-              if (characterC > max) {
-                max = characterC;
-                chosenCharacter = characters[0].characterC;
-              }
-              console.log("A: " + characterA);
-              console.log("B: " + characterB);
-              console.log("C: " + characterC);
               console.log(max);
               getCharacter.addRow(chosenCharacter);
             });
