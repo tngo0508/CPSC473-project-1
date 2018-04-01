@@ -34,7 +34,7 @@
     });
     var $progress = $("<div></div>", {
       "data-progress-bar": "bar",
-      "class": "progress-bar progress-bar-striped progress-bar-animated",
+      "class": "progress-bar progress-bar-striped progress-bar-animated bg-success",
       "role": "progressbar",
       "style": "width: " + width + "%",
       "aria-valuenow": 75,
