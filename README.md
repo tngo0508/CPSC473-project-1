@@ -71,10 +71,13 @@ Include any essential instructions for:
 -   Enhance UI
 -   Fix Minor Bugs
 -   Add More Useful Features
-    ## Contact
+
+## Contact
+
 -   grace.derderian@csu.fullerton.edu
 -   tngo0508@csu.fullerton.edu
 -   aadame4@csu.fullerton.edu
 -   cvillanueva19@csu.fullerton.edu
 -   mafredi1@csu.fullerton.edu 
-    ## License
+
+## License
