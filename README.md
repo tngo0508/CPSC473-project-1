@@ -26,14 +26,20 @@ Include any essential instructions for:
 + run it by "dpd -d"
 + website should be running on http://localhost:2403/
 
+## Built-With
+- [jQuery API](https://api.jquery.com/) - a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+- [Deployd](http://docs.deployd.com/docs/getting-started/what-is-deployd.html) - a tool that makes building APIs simple by providing important ready-made functionality out of the box that meet the demands of complex applications.
+- [Bootstrap 4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+
+
 ## TODO
-Enhance UI
-Fix Minor Bugs
-Add More Useful Features
+- Enhance UI
+- Fix Minor Bugs
+- Add More Useful Features
 ## Contact
-grace.derderian@csu.fullerton.edu
-tngo0508@csu.fullerton.edu
-aadame4@csu.fullerton.edu
-cvillanueva19@csu.fullerton.edu
-mafredi1@csu.fullerton.edu 
-License
+- grace.derderian@csu.fullerton.edu
+- tngo0508@csu.fullerton.edu
+- aadame4@csu.fullerton.edu
+- cvillanueva19@csu.fullerton.edu
+- mafredi1@csu.fullerton.edu 
+## License
