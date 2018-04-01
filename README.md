@@ -12,7 +12,8 @@ Creating a quiz works as follows:
 
 + This application is a project for a front-end course. We were asked to use client-side JavaScript, Ajax, and Deployd to build one of the applications asked by the professor. The one we selected was, “Visitors can create their own which character are you? Quizzes.”
 
-+ Screenshots of QuizCreator running
+## Screenshots of QuizCreator
+
 
 ## Core Technical Concepts/Inspiration
 We made this app as a project for a front-end course assignment.
