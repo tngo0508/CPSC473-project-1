@@ -66,7 +66,7 @@ Include any essential instructions for:
 -   [Deployd](http://docs.deployd.com/docs/getting-started/what-is-deployd.html) - a tool that makes building APIs simple by providing important ready-made functionality out of the box that meet the demands of complex applications.
 -   [Bootstrap 4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
 
-## TODO
+## To-Do
 
 -   Enhance UI
 -   Fix Minor Bugs
@@ -81,3 +81,11 @@ Include any essential instructions for:
 -   **Afredi,Momtaz Mohmad** - _mafredi1@csu.fullerton.edu_ [mafredi](https://github.com/mafredi) 
 
 ## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgements
+
+-   _Front-End Web Development: The Big Nerd Ranch Guide_, Aquino and Gandee, Pearson, ISBN: 0134433947
+-   **Professor Kenytt Avery** - _kavery@fullerton.edu_ - California State University, Fullerton
+-   **Yaphi Berhanu** - _<https://www.sitepoint.com/simple-javascript-quiz/>_
