@@ -21,9 +21,9 @@ With QuizCreator you will be able to access old quizzes and log in to your own a
 ## Getting Started/Requirements/Prerequisites/Dependencies
 Include any essential instructions for:
 + clone master branch to your local machine
-+ use command "dpd create new-project-1" to create your new directory for deployd database
-+ copy public and resources directory to your new-project-1
-+ run it by "dpd -d"
++ use command ```dpd create new-project-1``` to create your new directory for deployd database
++ copy **public** and **resources** directory to your new-project-1
++ run it by ```dpd -d```
 + website should be running on http://localhost:2403/
 
 ## Built-With
