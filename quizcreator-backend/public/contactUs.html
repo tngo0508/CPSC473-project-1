@@ -6,7 +6,7 @@
   <title>Contact Us Page</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheet/index.css">
+  <link rel="stylesheet" href="stylesheet/contactus.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans|Oxygen|Passion+One">
 
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -27,7 +27,7 @@
         <a class="nav-link" href="login.html">Get Started</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contactUs.html">Contact Us</a>
+        <a class="nav-link" data-toggle="modal" data-target="#feedback">Feedback</a>
       </li>
     </ul>
   </nav>
@@ -69,8 +69,8 @@
       </div>
     </div>
 
-    <div class="modal-dialog">
-      <div class="modal-content">
+    <div class="modal-dialog" id="Contributors">
+      <div class="modal-content" id="Contributors-content">
         <div class="modal-header">
           <h1 class="header-text">QuizCreater Contributors</h1>
         </div>
@@ -81,7 +81,7 @@
           <table class="table table-hover table-sm">
             <thead>
               <tr>
-                <th scope="col" colspan="3">Developer Names</th>
+                <th scope="col" colspan="3">Contributors</th>
                 <th scope="col">eMAils</th>
               </tr>
             </thead>
@@ -122,6 +122,71 @@
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedback" aria-hidden="true">
+    <div class="modal-dialog" role="document" id="feedback-dialog">
+      <div class="modal-content" id="feedback-content">
+        <div class="modal-header" id="feedback-headher">
+          <h5 class="modal-title" id="feedback-title">Leave Us Feedback</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form data-feedback="feedback">
+            <div class="form-group">
+              <label for="sender-name" class="col-form-label">Your Name:</label>
+              <input name="name" type="text" class="form-control" id="sender-name" placeholder="@bob" required>
+            </div>
+            <div class="form-group">
+              <label for="sender-email" class="col-form-label">Your email:</label>
+              <input name="email" type="email" class="form-control" id="sender-email" placeholder="quiz@creator.com" required>
+            </div>
+            <div class="form-group">
+              <label for="feedback-text" class="col-form-label">Feedback:</label>
+              <textarea name="feedback" class="form-control" id="feedback-text" rows="3" required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Send Feedback</button>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Send Feedback</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thank you!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          We really appreciate your feedback. We will try our best to improve this website according to your suggestion.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="/dpd.js" type="text/javascript"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/contactus.js" charset="utf-8"></script>
 </body>
 
 

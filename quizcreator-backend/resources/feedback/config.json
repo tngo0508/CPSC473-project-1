@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 0
+		},
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "email",
+			"order": 1
+		},
+		"feedback": {
+			"name": "feedback",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "feedback",
+			"order": 2
+		}
+	}
+}
