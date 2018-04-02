@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home Page</title>
+  <title>Contact Us Page</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheet/index.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans|Oxygen|Passion+One">
+
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -18,57 +21,108 @@
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Get Started</a>
+        <a class="nav-link" href="login.html">Get Started</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="contactUs.html">Contact Us</a>
       </li>
     </ul>
-
   </nav>
 
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="header-text">QuizCreater Creators</h1>
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="https://api.jquery.com/"><img class="card-img-top" src="img/jQuery.png" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+                  <a>jQuery</a>
+                </h4>
+          <p class="card-text">QuizCreator uses jQuery which is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a
+            multitude of browsers.</p>
+        </div>
       </div>
-      <div class="modal-body">
-        <table class="table table-hover table-sm">
-          <thead>
-            <tr>
-              <th scope="col" colspan="3">Developer Names</th>
-              <th scope="col">eMAils</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Thomas</td>
-              <td>Ngo</td>
-              <td>thomas@mail.com</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Chris</td>
-              <td>Villafan</td>
-              <td>chris@mail.com</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Alan</td>
-              <td>Adame</td>
-              <td>alan@mail.com</td>
-            </tr>
-          </tbody>
-        </table>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="http://docs.deployd.com/docs/getting-started/what-is-deployd.html"><img class="card-img-top" src="img/dpd.png" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+                  <a>Deployd</a>
+                </h4>
+          <p class="card-text">To save user information, QuizCreator is implemented using a tool that makes building APIs simple by providing important ready-made functionality out of the box that meet the demands of complex applications. This tool is called Deployd.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="img/bootstrap.png" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+                  <a>Bootstrap 4.0</a>
+                </h4>
+          <p class="card-text">Bootstrap 4.0 is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins
+            built on jQuery. We wanted a user friendly app with a modern look and took advantage of the great features Bootstrap 4.0 offers to create QuizCreator.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="header-text">QuizCreater Contributors</h1>
+        </div>
+        <div class="modal-body">
+          <p>If you have any comments or requests for features please feel free to contact any of the team members below. Or, you can also checkout the project on github.com</p>
+
+          <a href="https://github.com/tngo0508/CPSC473-project-1"><i>https://github.com/tngo0508/CPSC473-project-1</i></a>
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3">Developer Names</th>
+                <th scope="col">eMAils</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Thomas</td>
+                <td>Ngo</td>
+                <td>thomas@mail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Chris</td>
+                <td>Villafan</td>
+                <td>chris@mail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Alan</td>
+                <td>Adame</td>
+                <td>alan@mail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Grace</td>
+                <td>Derderian</td>
+                <td>grace@mail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Momtaz Mohmad</td>
+                <td>Afredi</td>
+                <td>momtaz@mail.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-
-
 </body>
+
 
 </html>
