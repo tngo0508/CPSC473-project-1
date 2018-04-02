@@ -49,18 +49,6 @@
     });
   };
 
-  // FormHandler.prototype.addAnswerHandler = function(fn) {
-  //   console.log("Setting answer handler for form");
-  //   this.$formElement.on("input", "[name=answer]", function(event) {
-  //     var answer = event.target.value;
-  //     if (fn(answer)) {
-  //       event.target.setCustomValidity("");
-  //     } else {
-  //       var message = "Answer must be a, b, or c";
-  //       event.target.setCustomValidity(message);
-  //     }
-  //   });
-  // };
   App.FormHandler = FormHandler;
   window.App = App;
 })(window);

@@ -14,7 +14,6 @@
   var buttonHandler = new ButtonHandler(BUTTON_LOGOUT);
   var CreateAlert = App.CreateAlert;
   var createAlert = new CreateAlert(FORM_ALERT);
-  var Validation = App.Validation;
 
   dpd.users.me(function(results, error) {
     if (error) {
@@ -57,7 +56,6 @@
       }
     });
   });
-  // formHandler.addAnswerHandler(Validation.validateAnswer);
 
   buttonHandler.addLogoutHandler();
 

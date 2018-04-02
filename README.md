@@ -71,6 +71,7 @@ Include any essential instructions for:
 -   Enhance UI
 -   Fix Minor Bugs
 -   Add More Useful Features
+-   Need to implement Forgot Password feature
 
 ## Authors/Contributors
 
