@@ -125,18 +125,17 @@
               }
               max = characterA;
               chosenCharacter = characters[0].characterA;
-
+              if (characterB > max) {
+                max = characterB;
+                chosenCharacter = characters[0].characterB;
+              }
+              if (characterC > max) {
+                max = characterC;
+                chosenCharacter = characters[0].characterC;
+              }
+              console.log(answeredQuestion);
               if (max === 0 || answeredQuestion < numberOfQuestion) {
                 chosenCharacter = "undefined since you haven't completed the quiz yet. Please refresh the page to retake the quiz.";
-              } else {
-                if (characterB > max) {
-                  max = characterB;
-                  chosenCharacter = characters[0].characterB;
-                }
-                if (characterC > max) {
-                  max = characterC;
-                  chosenCharacter = characters[0].characterC;
-                }
               }
               console.log("A: " + characterA);
               console.log("B: " + characterB);
