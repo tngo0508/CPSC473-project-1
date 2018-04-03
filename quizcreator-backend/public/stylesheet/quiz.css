@@ -121,7 +121,7 @@ button:hover {
 footer {
   text-align: center;
   font-weight: bold;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

@@ -28,15 +28,29 @@
   };
 
   function Row(chosenCharacter) {
-    var $div = $("<strong></strong>", {
+    var $jumbotron = $("<div></div>", {
+      "class": "jumbotron jumbotron-fluid",
       "data-user-character": "chosenCharacter"
     });
 
+    var $container = $("<div></div>", {
+      "class": "container"
+    });
+    var $h1 = $("<h1></h1>", {
+      "class": "display-4"
+    });
+    var title = "Quiz Result";
+    var $p = $("<p></p>", {
+      "class": "lead"
+    });
     var content = "Your character is " + chosenCharacter;
 
-    $div.append(content);
-
-    this.$element = $div;
+    $p.append(content);
+    $h1.append(title);
+    $container.append($h1);
+    $container.append($p);
+    $jumbotron.append($container);
+    this.$element = $jumbotron;
   }
 
   App.GetCharacter = GetCharacter;
