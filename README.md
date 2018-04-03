@@ -58,7 +58,7 @@ Include any essential instructions for:
 -   use command `dpd create new-project-1` to create your new directory for deployd database
 -   copy **public** and **resources** directory to your new-project-1
 -   run it by `dpd -d`
--   website should be running on <http://localhost:2403/>
+-   go to <http://localhost:2403/> on web-browser, the website will be running
 
 ## Built-With
 
