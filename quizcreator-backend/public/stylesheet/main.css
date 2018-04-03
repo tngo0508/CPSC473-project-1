@@ -11,9 +11,14 @@ h1 {
 }
 
 #logout-btn {
-  float: right;
+  position: absolute;
+  right: 16px;
 }
 
 .alert {
+  text-align: center;
+}
+
+footer {
   text-align: center;
 }

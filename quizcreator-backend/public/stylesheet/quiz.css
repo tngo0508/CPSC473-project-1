@@ -43,7 +43,7 @@ body {
 #create-new-quiz {
   position: absolute;
   top: 8px;
-  left: 16px;
+  right: 150px;
 }
 
 button {
@@ -116,4 +116,9 @@ button:hover {
   outline: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
 }
