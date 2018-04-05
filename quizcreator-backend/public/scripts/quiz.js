@@ -22,6 +22,7 @@
 
     Our implementation: We took out the part that determines the correct answer. Our algorithim calculates which of the A,B,C answers the user picks the most.
     Then at the end, we display the character type based on the most amounts of answer type. So if user picks mainly answer A's then they will be Character A.
+    The correct answer was also hardcoded before, but we implemented grabbibg from deployd database
 */
 
 
@@ -59,6 +60,7 @@
 
 
 //start of online code
+//this part of the code will add radio buttons and questions to output
 
         function buildQuiz() {
           //stores html output
@@ -69,10 +71,7 @@
             //stores answer choices
             const answers = [];
             for (letter in currentQuestion.answers) {
-              // ...add an HTML radio button
-
-
-              //ES6 function
+              //ES6 syntax - creates radio buttons based on number of answered stored
               answers.push(
                 `<label>
              <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -81,9 +80,7 @@
            </label>`
               );
             }
-
-            // add this question and its answers to the output
-            //ES6 functioni
+            //ES6 syntax - add this question and its answers to the output
             output.push(
               `<div class="slide">
            <div class="question"> ${currentQuestion.question} </div>
@@ -91,12 +88,18 @@
          </div>`
             );
           });
+          //for the es6 syntax, we had trouble converting to es5
 
           // finally combine our output list into one string of HTML and put it on the page
           quizContainer.innerHTML = output.join("");
         }
 //end of online code
 
+
+/*
+original online code, implemented having a "correct" answer per question.
+But we wanted to implement a character evaluation based on the answers. So no "wrong" or "correct" answer.
+*/
         var characterA = 0;
         var characterB = 0;
         var characterC = 0;
@@ -104,15 +107,15 @@
         var chosenCharacter;
         var answeredQuestion = 0;
 
+//online code -
+
         function showResults() {
-          // gather answer containers from our quiz
+          //gather answer containers from our quiz
           const answerContainers = quizContainer.querySelectorAll(".answers");
 
           // keep track of user's answers
-          // let numCorrect = 0; - not needed
-
-          // for each question...
           myQuestions.forEach((currentQuestion, questionNumber) => {
+
             // find selected answer
             const answerContainer = answerContainers[questionNumber];
             const selector = `input[name=question${questionNumber}]:checked`;
@@ -121,9 +124,13 @@
             if (userAnswer && answeredQuestion < numberOfQuestion) {
               answeredQuestion++;
             }
+
+//end of online code
             console.log("Number of answered questions: " + answeredQuestion);
 
             console.log(results[0].username);
+
+            //gets answer and adds count to the character. Then at the end displays greatest count
             dpd.character.get({
               username: results[0].username
             }, function(characters, error) {
@@ -167,7 +174,7 @@
         }
 
 //start of online code
-//displays
+        //displays quiz with a slide-based ui and implements transition for the previous and next buttons
         function showSlide(n) {
           slides[currentSlide].classList.remove("active-slide");
           slides[n].classList.add("active-slide");
@@ -187,8 +194,8 @@
             submitButton.style.display = "none";
           }
         }
-
-
+        // extra element we added - progressbar
+        //creates and calculates progress and displays it underneath
         var current = 1;
         var width = (current / numberOfQuestion * 100).toFixed(0);
         progressBar.addRow(width);
@@ -211,7 +218,6 @@
         const resultsContainer = document.getElementById("results");
         const submitButton = document.getElementById("submit");
 
-        // display quiz right away
         buildQuiz();
 
         const previousButton = document.getElementById("previous");
@@ -221,7 +227,6 @@
 
         showSlide(0);
 
-        // on submit, show results
         submitButton.addEventListener("click", showResults);
         previousButton.addEventListener("click", showPreviousSlide);
         nextButton.addEventListener("click", showNextSlide);

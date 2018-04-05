@@ -33,6 +33,7 @@
           optionB = data["optionB"],
           optionC = data["optionC"];
         // answer = data["answer"];
+
         if (question && optionA && optionB && optionC) {
           dpd.quiz.post({
             username: results.username,
@@ -42,6 +43,7 @@
             optionC: optionC,
             // answer: answer
           }, function(result, error) {
+            //checks if POST was successful. Failure if empty. 
             if (error) {
               alert(JSON.stringify(error));
             } else {
