@@ -15,10 +15,23 @@
   var getCharacter = new GetCharacter(DIV_CHARACTER);
   var ProgressBar = App.ProgressBar;
   var progressBar = new ProgressBar(PROGRESS_BAR);
+
+// Followed tutorial; https://www.sitepoint.com/simple-javascript-quiz/
+/*How we changed the functionality of code.
+    Online: Quiz was originally, a question w/ a "correct" answer. Then at the end of the quiz, it will display how much you have correct
+
+    Our implementation: We took out the part that determines the correct answer. Our algorithim calculates which of the A,B,C answers the user picks the most.
+    Then at the end, we display the character type based on the most amounts of answer type. So if user picks mainly answer A's then they will be Character A.
+*/
+
+
+  //gets current user
   dpd.users.me(function(results, error) {
     if (error) {
       alert(error.message);
     } else {
+
+      //grap results (questions and answers) from deployd
       dpd.quiz.get({
         username: results.username
       }, function(results, err) {
@@ -29,6 +42,7 @@
         var numberOfQuestion = 0;
         const myQuestions = [];
         results.forEach(function(data) {
+        //pushing results (questions and answers) from deployd
           myQuestions.push({
             question: data.question,
             answers: {
@@ -43,6 +57,9 @@
 
         console.log("Number of question: " + numberOfQuestion);
 
+
+//start of online code
+
         function buildQuiz() {
           //stores html output
           const output = [];
@@ -51,10 +68,11 @@
           myQuestions.forEach((currentQuestion, questionNumber) => {
             //stores answer choices
             const answers = [];
-
-            // and for each available answer...
             for (letter in currentQuestion.answers) {
               // ...add an HTML radio button
+
+
+              //ES6 function
               answers.push(
                 `<label>
              <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -65,6 +83,7 @@
             }
 
             // add this question and its answers to the output
+            //ES6 functioni
             output.push(
               `<div class="slide">
            <div class="question"> ${currentQuestion.question} </div>
@@ -76,7 +95,7 @@
           // finally combine our output list into one string of HTML and put it on the page
           quizContainer.innerHTML = output.join("");
         }
-
+//end of online code
 
         var characterA = 0;
         var characterB = 0;
@@ -90,7 +109,7 @@
           const answerContainers = quizContainer.querySelectorAll(".answers");
 
           // keep track of user's answers
-          let numCorrect = 0;
+          // let numCorrect = 0; - not needed
 
           // for each question...
           myQuestions.forEach((currentQuestion, questionNumber) => {
@@ -147,6 +166,8 @@
           });
         }
 
+//start of online code
+//displays
         function showSlide(n) {
           slides[currentSlide].classList.remove("active-slide");
           slides[n].classList.add("active-slide");
@@ -166,6 +187,7 @@
             submitButton.style.display = "none";
           }
         }
+
 
         var current = 1;
         var width = (current / numberOfQuestion * 100).toFixed(0);
@@ -206,4 +228,6 @@
       });
     }
   });
+
+//end of online code
 })(window);
