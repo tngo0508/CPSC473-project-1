@@ -18,7 +18,8 @@
 
 // Followed tutorial; https://www.sitepoint.com/simple-javascript-quiz/
 /*How we changed the functionality of code.
-    Online: Quiz was originally, a question w/ a "correct" answer. Then at the end of the quiz, it will display how much you have correct
+    Online: Quiz was originally, a question w/ a "correct" answer. Then at the end of the quiz, it will display how much you have correct.
+    The main purpose of using parts of the code, was to have a GUI that had the buttons, slides with questions, and everything else is displayed.
 
     Our implementation: We took out the part that determines the correct answer. Our algorithim calculates which of the A,B,C answers the user picks the most.
     Then at the end, we display the character type based on the most amounts of answer type. So if user picks mainly answer A's then they will be Character A.
